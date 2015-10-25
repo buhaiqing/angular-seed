@@ -15,9 +15,9 @@ module.exports = function(config) {
 
     frameworks: ['jasmine'],
 
-    browsers: ['PhantomJS'],
-	//browsers: ['PhantomJS', 'Chrome'],
- 
+    // browsers: ['PhantomJS'],
+    browsers: ['PhantomJS', 'Chrome', 'Firefox'],
+
     // you can define custom flags 
     customLaunchers: {
       'PhantomJS_custom': {
@@ -32,7 +32,7 @@ module.exports = function(config) {
         debug: true
       }
     },
- 
+
     phantomjsLauncher: {
       // Have phantomjs exit if a ResourceError is encountered (useful if karma exits without killing phantom) 
       exitOnResourceError: true
@@ -41,11 +41,11 @@ module.exports = function(config) {
     plugins: [
       'karma-chrome-launcher',
       'karma-firefox-launcher',
-	  'karma-phantomjs-launcher',
+      'karma-phantomjs-launcher',
       'karma-jasmine',
       'karma-junit-reporter'
     ],
-    reporters:['progress', 'junit'],
+    reporters: ['progress', 'junit'],
     junitReporter: {
       outputFile: 'test_out/unit.xml',
       suite: 'unit'
