@@ -8,6 +8,8 @@ describe('my app', function() {
   it('should automatically redirect to /view1 when location hash/fragment is empty', function() {
     browser.get('index.html');
     expect(browser.getLocationAbsUrl()).toMatch("/view1");
+	//var browser2 = browser.forkNewDriverInstance();
+    //browser2.get('http://www.qq.com')
   });
 
 
